@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+<hibernate-mapping>  
+<class name="com.Controller.UserPojo" table="User">  
+          <id name="Id" type="int" column="Id">  
+          <generator class="native"></generator>  
+          </id>  
+          <property name="Name"><column name="Name"/></property>
+          <property name="Username"><column name="Username" /></property>  
+          <property name="Password"> <column name="Password" /></property>  
+          <property name="ConfirmPass"><column name="ConfirmPass"/></property>
+          <property name="Gender"><column name="Gender"/></property>
+          <property name="Age"><column name="Age" /></property>
+</class>  
+         <class name="com.BMIController.BMIPojo" table="bmi">
+          <id name="Id" type="int" column="Id">  
+          <generator class="native"></generator>  
+          </id>  
+          <property name="height"><column name="Height"/></property>
+          <property name="weight"><column name="Weight" /></property>
+          <property name="Age"><column name="Age"/></property>
+         </class>   
+<class name="com.FeedbackController.FeedbackPojo" table="feedback">
+	<id name="Id" type="int" column="Id">  
+          <generator class="native"></generator>  
+    </id>
+	 <property name="Name"><column name="Name"/></property>
+	  <property name="Email"><column name="Email"/></property>
+     <property name="Comment"><column name="Comment" /></property>  
+
+</class>
+<class name="com.AdminController.AdminPojo" table="diet">
+	<id name="Id" type="int" column="Id">  
+          <generator class="native"></generator>  
+    </id>
+	 <property name="Category"><column name="Category"/></property>
+	  <property name="Do"><column name="Do"/></property>
+     <property name="Dont"><column name="Dont" /></property>  
+
+</class>
+<class name="com.ReportController.ReportPojo" table="diet">
+	<id name="Id" type="int" column="Id">  
+          <generator class="native"></generator>  
+    </id>
+	 <property name="Category"><column name="Category"/></property>
+	  <property name="Do"><column name="Do"/></property>
+     <property name="Dont"><column name="Dont" /></property>  
+
+</class>
+</hibernate-mapping>  

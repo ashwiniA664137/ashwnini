@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+
+<bean name="/SignUp.spring" class="com.Controller.UserController"/>
+<bean name="/Input.spring" class="com.LoginController.UserLoginController"/>
+<bean name="/Report.spring" class="com.BMIController.BMIController"/>
+<bean name="/Feedback.spring" class="com.FeedbackController.FeedbackController"/>
+<bean name="/Admin.spring" class="com.AdminController.AdminController"/>
+<bean name="/ReportDisp.spring" class="com.ReportController.ReportController"/>
+<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+</bean>
+</beans>
